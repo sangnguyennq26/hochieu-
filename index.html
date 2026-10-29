@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hộ Chiếu Cội Nguồn – Đền Hùng, Phú Thọ | Chạm vào lịch sử, Kết nối cội nguồn</title>
+  <meta name="description" content="Hành trình số khám phá cội nguồn dân tộc Việt Nam tại Khu di tích lịch sử Đền Hùng, Phú Thọ. Check-in di tích, quét QR mở khóa câu chuyện lịch sử, sưu tầm dấu ấn hộ chiếu điện tử, đặt tour và mua sắm đặc sản OCOP Đất Tổ.">
+
+  <!-- Google Fonts: Playfair Display, Cinzel, Be Vietnam Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SECTION 3: HEADER
+       ========================================================================== -->
+  <header class="site-header" id="mainHeader">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" title="Hộ Chiếu Cội Nguồn">
+        <img src="assets/logo.svg" alt="Hộ Chiếu Cội Nguồn Logo" class="brand-icon">
+        <div class="brand-title-wrap">
+          <span class="brand-name">HỘ CHIẾU CỘI NGUỒN</span>
+          <span class="brand-sub">ĐỀN HÙNG • PHÚ THỌ</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Trang chủ</a></li>
+          <li><a href="#journey" class="nav-link">Hành trình</a></li>
+          <li><a href="#storytelling" class="nav-link">Câu chuyện Đất Tổ</a></li>
+          <li><a href="#interactive-map" class="nav-link">Bản đồ</a></li>
+          <li><a href="#tours" class="nav-link">Tour Đền Hùng</a></li>
+          <li><a href="#ocop" class="nav-link">OCOP Phú Thọ</a></li>
+          <li><a href="javascript:void(0)" onclick="openPassportModal()" class="nav-link">Hộ chiếu của tôi</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions & Primary CTA -->
+      <div class="header-actions">
+        <!-- Search Trigger -->
+        <button class="icon-btn" id="searchBtn" title="Tìm kiếm di tích, tour, OCOP">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <!-- Cart Trigger -->
+        <button class="icon-btn cart-toggle-btn" title="Giỏ hàng OCOP">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadge">1</span>
+        </button>
+
+        <!-- User Account / Passport Trigger -->
+        <button class="icon-btn" id="accountBtn" title="Hồ sơ trải nghiệm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </button>
+
+        <!-- Primary Header CTA -->
+        <a href="javascript:void(0)" onclick="openPassportModal()" class="btn-primary" style="padding: 0.65rem 1.35rem; font-size: 0.88rem;">
+          Nhận Hộ chiếu
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 4: HERO SECTION (WITH 3D DIGITAL PASSPORT CARD)
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <!-- Background Backdrop & Gradients -->
+    <div class="hero-backdrop">
+      <img src="https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?auto=format&fit=crop&w=1920&q=85" 
+           alt="Khu Di Tích Lịch Sử Đền Hùng Núi Nghĩa Lĩnh" 
+           class="hero-bg-img">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Rotating Bronze Drum Pattern Ambient Watermark -->
+    <img src="assets/dongson-pattern.svg" alt="Hoa văn trống đồng Đông Sơn" class="hero-pattern">
+
+    <div class="container hero-content-grid">
+      <!-- Left Hero Text Column -->
+      <div class="hero-text-col">
+        <div class="hero-eyebrow">
+          <span class="badge-gold">
+            <img src="assets/logo.svg" style="width:16px;height:16px;" alt="Logo">
+            KHÁM PHÁ ĐẤT TỔ HÙNG VƯƠNG
+          </span>
+        </div>
+
+        <h1 class="hero-heading">
+          Hành trình trở về<br>
+          <span class="text-gradient-red">CỘI NGUỒN DÂN TỘC</span>
+        </h1>
+
+        <p class="hero-subheading">
+          Khám phá Đền Hùng qua một hành trình hoàn toàn mới. Check-in di tích, mở khóa những câu chuyện lịch sử ngàn năm, sưu tầm dấu ấn và lưu giữ hành trình về miền Đất Tổ linh thiêng.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="javascript:void(0)" onclick="openPassportModal()" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            Bắt đầu hành trình
+          </a>
+
+          <a href="#journey" class="btn-secondary">
+            Khám phá Đền Hùng
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-highlights">
+          <span>10+ điểm khám phá</span>
+          <span class="dot">•</span>
+          <span>Câu chuyện lịch sử</span>
+          <span class="dot">•</span>
+          <span>Hộ chiếu điện tử</span>
+          <span class="dot">•</span>
+          <span>Quà tặng Cội nguồn</span>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive 3D Digital Passport Card -->
+      <div class="passport-card-wrapper" title="Nhấp để xem toàn bộ Hộ chiếu Cội nguồn">
+        <div class="passport-card-3d">
+          <img src="assets/dongson-pattern.svg" alt="Pattern" class="card-pattern-overlay">
+
+          <div class="card-header">
+            <div class="card-emblem">
+              <img src="assets/logo.svg" alt="Emblem" class="card-emblem-icon">
+              <div>
+                <div class="card-emblem-text">HỘ CHIẾU CỘI NGUỒN</div>
+                <div class="card-country">PHÚ THỌ – VIỆT NAM</div>
+              </div>
+            </div>
+            <div style="font-size: 0.65rem; color: #D5A437; font-weight: 700; border: 1px solid rgba(213,164,55,0.4); padding: 2px 6px; border-radius: 4px;">
+              DIGITAL VIP
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="card-user-info">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" 
+                   alt="Chủ nhân Hộ chiếu" 
+                   class="user-avatar">
+              <div class="user-details">
+                <h4>Nguyễn Văn Hùng</h4>
+                <div class="user-id">PASSPORT: VN-HG-2026-0892</div>
+                <div style="font-size: 0.72rem; color: rgba(255,255,255,0.7); margin-top: 2px;">
+                  Cấp bởi: BQL Di Tích Đền Hùng
+                </div>
+              </div>
+            </div>
+
+            <div class="card-stamps-stat">
+              <div class="stat-header">
+                <span style="color: rgba(255,255,255,0.85); font-weight: 500;">Dấu ấn đã thu thập:</span>
+                <span class="stat-count">04 / 10 Dấu ấn</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill"></div>
+              </div>
+              <div style="display:flex; justify-content:space-between; margin-top:6px; font-size:0.7rem; color:rgba(255,255,255,0.6);">
+                <span>Tiến độ hành trình</span>
+                <span style="color:var(--color-vang-dong); font-weight:700;">40% Hoàn thành</span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <div class="card-qr-box">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=HO-CHIEU-COI-NGUON-VN-HG-2026-0892" 
+                     alt="Mã QR Hộ Chiếu" 
+                     class="card-qr-img">
+              </div>
+              <img src="assets/stamp-verified.svg" alt="Con dấu đã khám phá" class="card-seal-applied">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5: HỘ CHIẾU CỘI NGUỒN LÀ GÌ?
+       ========================================================================== -->
+  <section class="section-passport-intro" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-red">TRẢI NGHIỆM DU LỊCH DI SẢN THỜI ĐẠI MỚI</span>
+        <h2 class="section-title">Một tấm hộ chiếu. Một hành trình xuyên lịch sử.</h2>
+        <p class="section-desc">
+          Biến chuyến hành hương Đền Hùng của bạn thành một cuộc du hành di sản sống động. Khám phá 10 di tích tâm linh, thu thập từng dấu ấn son và lưu giữ kỷ niệm thiêng liêng.
+        </p>
+      </div>
+
+      <!-- 3 Steps Grid -->
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h3 class="step-title">Nhận hộ chiếu</h3>
+          <p class="step-text">
+            Đăng ký Hộ chiếu Cội nguồn miễn phí bằng điện thoại. Nhận mã định danh cá nhân độc bản và bắt đầu hành trình.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h3 class="step-title">Khám phá & Check-in</h3>
+          <p class="step-text">
+            Đến từng di tích trong quần thể Đền Hùng, quét mã QR thông minh để mở khóa những câu chuyện lịch sử sống động.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h3 class="step-title">Thu thập dấu ấn</h3>
+          <p class="step-text">
+            Đóng dấu son điện tử vào Hộ chiếu, mở khóa huy hiệu vinh danh, chứng nhận Cội nguồn và nhận ưu đãi quà tặng OCOP.
+          </p>
+        </div>
+      </div>
+
+      <!-- Interactive Open Passport Booklet Visual with 5 Stamps -->
+      <div class="passport-booklet-showcase">
+        <div class="booklet-pages">
+          <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px dashed rgba(213,164,55,0.4); padding-bottom:0.75rem; margin-bottom:1.25rem;">
+            <div style="font-family:var(--font-serif); font-weight:700; color:var(--color-do-son); font-size:1.1rem;">
+              TRANG THỊ THỰC DẤU ẤN (VISA PAGES)
+            </div>
+            <span class="badge-gold">4 / 10 HOÀN THÀNH</span>
+          </div>
+
+          <div class="stamp-collection-grid">
+            <!-- Stamp 1: Cổng Đền Hùng -->
+            <div class="stamp-slot stamped">
+              <img src="assets/stamp-verified.svg" alt="Cổng Đền Hùng">
+              <span class="slot-label" style="color:var(--color-do-son);">Cổng Đền</span>
+            </div>
+            <!-- Stamp 2: Đền Hạ -->
+            <div class="stamp-slot stamped">
+              <img src="assets/stamp-verified.svg" alt="Đền Hạ">
+              <span class="slot-label" style="color:var(--color-do-son);">Đền Hạ</span>
+            </div>
+            <!-- Stamp 3: Chùa Thiên Quang -->
+            <div class="stamp-slot stamped">
+              <img src="assets/stamp-verified.svg" alt="Thiên Quang">
+              <span class="slot-label" style="color:var(--color-do-son);">Thiên Quang</span>
+            </div>
+            <!-- Stamp 4: Đền Trung -->
+            <div class="stamp-slot stamped">
+              <img src="assets/stamp-verified.svg" alt="Đền Trung">
+              <span class="slot-label" style="color:var(--color-do-son);">Đền Trung</span>
+            </div>
+            <!-- Stamp 5: Đền Thượng (Unlocks via interactive scan) -->
+            <div class="stamp-slot locked" id="bookletStampDenThuong">
+              <div style="font-size:1.6rem; color:#A0AEC0; margin-bottom:0.25rem;">🔒</div>
+              <span class="slot-label">Đền Thượng</span>
+            </div>
+            <!-- Stamp 6: Lăng Hùng Vương -->
+            <div class="stamp-slot locked">
+              <div style="font-size:1.6rem; color:#A0AEC0; margin-bottom:0.25rem;">🔒</div>
+              <span class="slot-label">Lăng Vua Hùng</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="booklet-cta-col">
+          <span class="badge-gold" style="margin-bottom:1rem;">DÀNH CHO MỌI NGƯỜI DÂN VIỆT NAM</span>
+          <h3 style="font-size:1.85rem; color:var(--color-nau-dam); margin-bottom:1rem; line-height:1.25;">
+            Sẵn sàng lưu giữ dấu ấn của bạn tại Đất Tổ?
+          </h3>
+          <p style="color:var(--color-text-muted); font-size:0.95rem; margin-bottom:1.5rem; line-height:1.6;">
+            Hộ chiếu điện tử hoàn toàn miễn phí, lưu giữ vĩnh viễn trên điện thoại của bạn cùng các chứng nhận lịch sử thiêng liêng.
+          </p>
+          <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+            <button onclick="openPassportModal()" class="btn-primary">
+              Tạo Hộ chiếu miễn phí
+            </button>
+            <button onclick="simulateQRCheckin('den-thuong')" class="btn-secondary">
+              ⚡ Thử quét check-in
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6: HÀNH TRÌNH THEO DẤU VUA HÙNG (9 SITES)
+       ========================================================================== -->
+  <section class="section-journey" id="journey">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-gold">KHÁM PHÁ CÁC ĐIỂM DI TÍCH LINH THIÊNG</span>
+        <h2 class="section-title">Theo dấu hành trình về Đất Tổ</h2>
+        <p class="section-desc">
+          “Mỗi địa điểm là một chương trong câu chuyện dựng nước.” Quần thể di tích lịch sử Đền Hùng trải dài từ chân núi lên đỉnh Nghĩa Lĩnh huyền thoại.
+        </p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="journey-filter-bar">
+        <button class="filter-pill active" data-filter="all">Tất cả điểm đến (09)</button>
+        <button class="filter-pill" data-filter="completed">Đã khám phá (04)</button>
+        <button class="filter-pill" data-filter="locked">Chưa check-in (05)</button>
+        <button class="filter-pill" data-filter="center">Khu Núi Nghĩa Lĩnh</button>
+        <button class="filter-pill" data-filter="outer">Khu Núi Vặn & Núi Sim</button>
+      </div>
+
+      <!-- Places Cards Grid (Populated dynamically by app.js) -->
+      <div class="places-grid" id="placesGrid">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 7: STORYTELLING – DÒNG CHẢY CỘI NGUỒN
+       ========================================================================== -->
+  <section class="section-storytelling" id="storytelling">
+    <div class="container">
+      <div class="section-header" style="color:#FFF;">
+        <span class="badge-gold">BIÊN NIÊN SỬ THỜI ĐẠI HÙNG VƯƠNG</span>
+        <h2 class="section-title">Ngàn năm kể một câu chuyện</h2>
+        <p class="section-desc">
+          Lắng nghe dòng chảy lịch sử xuyên qua bốn ngàn năm dựng nước và giữ nước của dân tộc Việt Nam.
+        </p>
+      </div>
+
+      <!-- Chapter Tabs Navigation -->
+      <div class="story-chapters-nav">
+        <button class="story-tab-btn active" data-target="story-ch1">Chương 01: Con Rồng Cháu Tiên</button>
+        <button class="story-tab-btn" data-target="story-ch2">Chương 02: Nhà nước Văn Lang</button>
+        <button class="story-tab-btn" data-target="story-ch3">Chương 03: Núi Nghĩa Lĩnh</button>
+        <button class="story-tab-btn" data-target="story-ch4">Chương 04: Tín ngưỡng Hùng Vương</button>
+        <button class="story-tab-btn" data-target="story-ch5">Chương 05: Giỗ Tổ Hùng Vương</button>
+      </div>
+
+      <!-- Story Viewport Slides -->
+      <div class="story-viewport">
+        <!-- Slide 1 -->
+        <div class="story-slide active" id="story-ch1">
+          <div class="story-illustration">
+            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80" alt="Con Rồng Cháu Tiên" class="story-img">
+          </div>
+          <div class="story-content">
+            <span class="badge-gold" style="margin-bottom:1rem;">KHỞI THỦY DÂN TỘC</span>
+            <h3>Huyền thoại Con Rồng Cháu Tiên</h3>
+            <p>
+              Lạc Long Quân - giống Rồng từ biển cả, kết duyên cùng Tiên nữ Âu Cơ chốn non cao. Cuộc hôn duyên thần kỳ sinh ra bọc trăm trứng, nở thành trăm người con trai khôi ngô tuấn tú. Khi chia tay, năm mươi con theo cha về biển, năm mươi con theo mẹ lên núi, cùng chung lời thề non hẹn biển giữ gìn bờ cõi non sông.
+            </p>
+            <div class="unesco-highlight-box">
+              <div class="unesco-title">Ý nghĩa cội nguồn</div>
+              <div class="unesco-quote">“Hai tiếng ‘Đồng bào’ thiêng liêng ra đời từ ấy - cùng chung bọc trăm trứng mẹ Âu Cơ.”</div>
+            </div>
+            <button class="btn-primary" onclick="openStoryModal('den-ha')">Đọc chi tiết truyền thuyết →</button>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="story-slide" id="story-ch2">
+          <div class="story-illustration">
+            <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" alt="Nhà nước Văn Lang" class="story-img">
+          </div>
+          <div class="story-content">
+            <span class="badge-gold" style="margin-bottom:1rem;">NHÀ NƯỚC ĐẦU TIÊN CỦA NGƯỜI VIỆT</span>
+            <h3>Bình minh Nhà nước Văn Lang</h3>
+            <p>
+              Người con trưởng theo mẹ Âu Cơ được tôn lên làm Vua, xưng là Hùng Vương, đóng đô ở Phong Châu (nay thuộc Phú Thọ), đặt quốc hiệu là Văn Lang. Trải qua 18 đời Vua Hùng, nền văn minh lúa nước sông Hồng và văn hóa Đông Sơn rực rỡ với tiếng trống đồng ngân vang khắp vùng đất cổ.
+            </p>
+            <div class="unesco-highlight-box">
+              <div class="unesco-title">Di sản khảo cổ học</div>
+              <div class="unesco-quote">“Kinh đô Phong Châu - nơi hội tụ linh khí của ngã ba sông Thao, sông Lô và sông Đà.”</div>
+            </div>
+            <button class="btn-primary" onclick="openStoryModal('den-trung')">Khám phá thời đại Hùng Vương →</button>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="story-slide" id="story-ch3">
+          <div class="story-illustration">
+            <img src="https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?auto=format&fit=crop&w=800&q=80" alt="Núi Nghĩa Lĩnh" class="story-img">
+          </div>
+          <div class="story-content">
+            <span class="badge-gold" style="margin-bottom:1rem;">ĐỊA LINH NHÂN KIỆT</span>
+            <h3>Núi Nghĩa Lĩnh – Đất thiêng nguồn cội</h3>
+            <p>
+              Núi Nghĩa Lĩnh (còn gọi là núi Hùng, Cảo Sơn) cao 175m, có thế đất “tam sơn trùng điệp”, tả thanh long hữu bạch hổ. Nơi đây từng là trung tâm thực hành nghi lễ thờ Thần Mặt Trời, Thần Núi, Thần Lúa của cư dân nông nghiệp thời kỳ tiền sử.
+            </p>
+            <div class="unesco-highlight-box">
+              <div class="unesco-title">Phong thủy Đất Tổ</div>
+              <div class="unesco-quote">“Đỉnh Kính Thiên Lĩnh Điện - nơi trời đất giao hòa, mạch nguồn linh khí ngàn đời của Tổ quốc.”</div>
+            </div>
+            <button class="btn-primary" onclick="openStoryModal('den-thuong')">Khám phá đỉnh Nghĩa Lĩnh →</button>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="story-slide" id="story-ch4">
+          <div class="story-illustration">
+            <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=800&q=80" alt="Tín ngưỡng thờ cúng Hùng Vương" class="story-img">
+          </div>
+          <div class="story-content">
+            <span class="badge-gold" style="margin-bottom:1rem;">DI SẢN THẾ GIỚI UNESCO</span>
+            <h3>Tín ngưỡng thờ cúng Hùng Vương</h3>
+            <p>
+              Ngày 06/12/2012, UNESCO đã chính thức công nhận "Tín ngưỡng thờ cúng Hùng Vương ở Phú Thọ" là Di sản văn hóa phi vật thể đại diện của nhân loại. Đây là biểu tượng của tinh thần đại đoàn kết toàn dân tộc, đạo lý "Uống nước nhớ nguồn" duy nhất trên thế giới tôn vinh Quốc Tổ chung.
+            </p>
+            <div class="unesco-highlight-box">
+              <div class="unesco-title">Giá trị nhân loại</div>
+              <div class="unesco-quote">“Minh chứng cho truyền thống gắn kết cộng đồng và lòng biết ơn sâu sắc đối với tổ tiên.”</div>
+            </div>
+            <button class="btn-primary" onclick="openPassportModal()">Nhận huy hiệu UNESCO →</button>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="story-slide" id="story-ch5">
+          <div class="story-illustration">
+            <img src="https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?auto=format&fit=crop&w=800&q=80" alt="Giỗ Tổ Hùng Vương" class="story-img">
+          </div>
+          <div class="story-content">
+            <span class="badge-gold" style="margin-bottom:1rem;">NGÀY HỘI NON SÔNG</span>
+            <h3>Giỗ Tổ Hùng Vương – Mùng Mười Tháng Ba</h3>
+            <p>
+              Hàng năm vào dịp mùng 10 tháng 3 Âm lịch, hàng triệu đồng bào trong nước và kiều bào khắp năm châu đều một lòng hướng về đỉnh thiêng Nghĩa Lĩnh dâng nén tâm hương tưởng niệm công đức dựng nước của các Vua Hùng.
+            </p>
+            <div class="unesco-highlight-box">
+              <div class="unesco-title">Ca dao ngàn đời</div>
+              <div class="unesco-quote">“Dù ai đi ngược về xuôi / Nhớ ngày Giỗ Tổ mùng Mười tháng Ba.”</div>
+            </div>
+            <a href="#tours" class="btn-primary">Đặt tour hành hương mùa lễ hội →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 8: SECTION INTERACTIVE MAP
+       ========================================================================== -->
+  <section class="section-interactive-map" id="interactive-map">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-gold">HƯỚNG DẪN ĐỊNH VỊ THÔNG MINH</span>
+        <h2 class="section-title">Bản đồ hành trình Cội nguồn</h2>
+        <p class="section-desc">
+          Bản đồ tương tác khu di tích Đền Hùng. Chạm vào từng điểm ghim để xem thông tin địa hình, câu chuyện lịch sử và thực hiện check-in dấu ấn.
+        </p>
+      </div>
+
+      <div class="map-card-wrapper">
+        <!-- Map Top Toolbar & Progress -->
+        <div class="map-toolbar">
+          <div class="map-progress-indicator">
+            <span style="font-weight:700; color:var(--color-nau-dam); font-size:1.05rem;">
+              Tiến độ của bạn:
+            </span>
+            <span class="badge-red" style="font-size:0.85rem;">
+              ĐÃ KHÁM PHÁ 4/10 ĐỊA ĐIỂM (40%)
+            </span>
+          </div>
+
+          <div style="display:flex; gap:0.75rem;">
+            <button onclick="simulateQRCheckin('den-thuong')" class="btn-gold" style="font-size:0.85rem; padding:0.5rem 1.25rem;">
+              📷 Check-in tại Đền Thượng
+            </button>
+            <a href="#journey" class="btn-secondary" style="font-size:0.85rem; padding:0.5rem 1.25rem;">
+              Tiếp tục hành trình →
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Map Canvas Stage -->
+        <div class="map-stage" id="mapStage">
+          <img src="assets/map-den-hung.svg" alt="Bản đồ Khu Di Tích Đền Hùng" class="map-svg-canvas">
+          
+          <!-- Map Pins are injected dynamically via app.js -->
+          <!-- Popover Modal Container for Clicked Pins -->
+          <div class="map-info-popover" id="mapPopover">
+            <!-- Injected via app.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 9: GAMIFICATION & ACHIEVEMENT DASHBOARD
+       ========================================================================== -->
+  <section class="section-gamification" id="gamification">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-red">BẢNG TIẾN ĐỘ & DANH HIỆU CÁ NHÂN</span>
+        <h2 class="section-title">Bạn đã đi được bao xa trên hành trình Cội nguồn?</h2>
+        <p class="section-desc">
+          Mỗi bước chân chạm vào đất thiêng là một dấu son lịch sử được khắc ghi. Hoàn thành các cột mốc để mở khóa huy hiệu vinh danh độc bản.
+        </p>
+      </div>
+
+      <!-- Dashboard Metric Numbers -->
+      <div class="dashboard-stats-grid">
+        <div class="stat-metric-card">
+          <div class="metric-number" id="dashMetricStamps">04</div>
+          <div class="metric-label">Dấu ấn đã thu thập</div>
+        </div>
+
+        <div class="stat-metric-card">
+          <div class="metric-number" id="dashMetricRemaining">06</div>
+          <div class="metric-label">Điểm di tích còn lại</div>
+        </div>
+
+        <div class="stat-metric-card">
+          <div class="metric-number" id="dashMetricProgress">40%</div>
+          <div class="metric-label">Hoàn thành hành trình</div>
+        </div>
+      </div>
+
+      <!-- Gamification Badges Grid -->
+      <div class="badges-grid">
+        <!-- Badge 1: Người con Đất Tổ (Unlocked) -->
+        <div class="badge-card unlocked">
+          <div class="badge-icon-wrap">🌿</div>
+          <h4 class="badge-name">Người con Đất Tổ</h4>
+          <p style="font-size:0.82rem; color:var(--color-text-muted); margin-bottom:1rem;">
+            Đăng ký Hộ chiếu và check-in thành công điểm di tích đầu tiên.
+          </p>
+          <span class="badge-status" style="color:var(--color-do-son);">★ ĐÃ MỞ KHÓA</span>
+        </div>
+
+        <!-- Badge 2: Nhà khám phá Nghĩa Lĩnh (Unlocked) -->
+        <div class="badge-card unlocked">
+          <div class="badge-icon-wrap">⛰</div>
+          <h4 class="badge-name">Nhà khám phá Nghĩa Lĩnh</h4>
+          <p style="font-size:0.82rem; color:var(--color-text-muted); margin-bottom:1rem;">
+            Khám phá 4 điểm di tích trên trục chính núi Nghĩa Lĩnh.
+          </p>
+          <span class="badge-status" style="color:var(--color-do-son);">★ ĐÃ MỞ KHÓA</span>
+        </div>
+
+        <!-- Badge 3: Người kể chuyện Cội nguồn (Locked) -->
+        <div class="badge-card locked">
+          <div class="badge-icon-wrap">📜</div>
+          <h4 class="badge-name">Người kể chuyện Cội nguồn</h4>
+          <p style="font-size:0.82rem; color:var(--color-text-muted); margin-bottom:1rem;">
+            Mở khóa toàn bộ 5 chương lịch sử và check-in Đền Thượng.
+          </p>
+          <span class="badge-status" style="color:#718096;">🔒 CẦN THÊM 1 ĐIỂM</span>
+        </div>
+
+        <!-- Badge 4: Đại sứ Văn hóa Đất Tổ (Locked) -->
+        <div class="badge-card locked">
+          <div class="badge-icon-wrap">👑</div>
+          <h4 class="badge-name">Đại sứ Văn hóa Đất Tổ</h4>
+          <p style="font-size:0.82rem; color:var(--color-text-muted); margin-bottom:1rem;">
+            Hoàn thành trọn vẹn 10 điểm di tích và chia sẻ cảm nhận hành trình.
+          </p>
+          <span class="badge-status" style="color:#718096;">🔒 KHÓA</span>
+        </div>
+      </div>
+
+      <div style="text-align:center;">
+        <button onclick="openPassportModal()" class="btn-primary" style="padding:0.9rem 2.25rem;">
+          🎫 Xem hộ chiếu của tôi
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 10: TOUR KHÁM PHÁ ĐỀN HÙNG
+       ========================================================================== -->
+  <section class="section-tours" id="tours">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-gold">HÀNH TRÌNH ĐƯỢC THIẾT KẾ ĐỘC QUYỀN</span>
+        <h2 class="section-title">Chọn hành trình của bạn</h2>
+        <p class="section-desc">
+          Những tour được thiết kế để bạn không chỉ tham quan, mà còn hiểu sâu sắc câu chuyện phía sau mỗi địa danh linh thiêng.
+        </p>
+      </div>
+
+      <!-- Tour Category Filter Tabs -->
+      <div class="journey-filter-bar">
+        <button class="filter-pill tour-filter-btn active" data-tour-filter="all">Tất cả tour</button>
+        <button class="filter-pill tour-filter-btn" data-tour-filter="half-day">1/2 ngày</button>
+        <button class="filter-pill tour-filter-btn" data-tour-filter="full-day">01 ngày</button>
+        <button class="filter-pill tour-filter-btn" data-tour-filter="two-days">2 ngày 1 đêm</button>
+        <button class="filter-pill tour-filter-btn" data-tour-filter="family">Gia đình</button>
+        <button class="filter-pill tour-filter-btn" data-tour-filter="group">Nhóm & Sinh viên</button>
+      </div>
+
+      <!-- Tour Cards Grid -->
+      <div class="tours-grid">
+        <!-- Tour 01 -->
+        <div class="tour-card" data-category="half-day family group">
+          <div class="tour-image-box">
+            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=700&q=80" alt="Tour Theo dấu Vua Hùng" class="tour-img">
+            <span class="badge-gold tour-badge-top">TOUR 01</span>
+            <span class="tour-duration-tag">⏱ 1/2 Ngày (4 tiếng)</span>
+          </div>
+          <div class="tour-content">
+            <h3 class="tour-title">Theo dấu Vua Hùng</h3>
+            <div class="tour-route">
+              📍 <strong>Lộ trình:</strong> Đền Hạ → Đền Trung → Đền Thượng → Lăng Hùng Vương → Đền Giếng
+            </div>
+            <div class="tour-suitable">
+              👥 <strong>Phù hợp:</strong> Gia đình • Sinh viên • Nhóm bạn trẻ
+            </div>
+            <div class="tour-pricing-row">
+              <div>
+                <div style="font-size:0.75rem; color:var(--color-text-muted);">Giá từ</div>
+                <div class="tour-price-val">Từ 350.000đ/người</div>
+              </div>
+              <button onclick="openTourBooking('Theo dấu Vua Hùng', 'Từ 350.000đ/người')" class="btn-primary" style="padding:0.6rem 1.25rem; font-size:0.85rem;">
+                Xem hành trình
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tour 02 (Featured) -->
+        <div class="tour-card featured" data-category="full-day family group">
+          <div class="tour-image-box">
+            <img src="https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?auto=format&fit=crop&w=700&q=80" alt="Một ngày về Đất Tổ" class="tour-img">
+            <span class="badge-red tour-badge-top" style="background:var(--color-do-son); color:#FFF;">★ PHỔ BIẾN NHẤT</span>
+            <span class="tour-duration-tag">⏱ 01 Ngày trọn vẹn</span>
+          </div>
+          <div class="tour-content">
+            <h3 class="tour-title">Một ngày về Đất Tổ</h3>
+            <div class="tour-route">
+              📍 <strong>Bao gồm:</strong> Toàn bộ Đền Hùng • Bảo tàng Hùng Vương • Thưởng thức Ẩm thực Phú Thọ • Trải nghiệm Hát Xoan • Check-in trọn bộ Hộ chiếu
+            </div>
+            <div class="tour-suitable">
+              👥 <strong>Phù hợp:</strong> Đoàn hành hương • Doanh nghiệp • Gia đình nhiều thế hệ
+            </div>
+            <div class="tour-pricing-row">
+              <div>
+                <div style="font-size:0.75rem; color:var(--color-text-muted);">Giá từ</div>
+                <div class="tour-price-val">Từ 680.000đ/người</div>
+              </div>
+              <button onclick="openTourBooking('Một ngày về Đất Tổ', 'Từ 680.000đ/người')" class="btn-primary" style="padding:0.6rem 1.25rem; font-size:0.85rem;">
+                Đặt tour ngay
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tour 03 -->
+        <div class="tour-card" data-category="two-days family">
+          <div class="tour-image-box">
+            <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=700&q=80" alt="Di sản Đất Tổ" class="tour-img">
+            <span class="badge-gold tour-badge-top">TOUR 03</span>
+            <span class="tour-duration-tag">⏱ 2 Ngày 1 Đêm</span>
+          </div>
+          <div class="tour-content">
+            <h3 class="tour-title">Di sản Đất Tổ</h3>
+            <div class="tour-route">
+              📍 <strong>Lộ trình:</strong> Đền Hùng • Đền Mẫu Âu Cơ • Di sản Hát Xoan làng cổ Hùng Lô • Đồi chè Long Cốc • Trải nghiệm chế biến đặc sản OCOP
+            </div>
+            <div class="tour-suitable">
+              👥 <strong>Phù hợp:</strong> Du khách muốn trải nghiệm văn hóa sâu sắc & nghỉ dưỡng sinh thái
+            </div>
+            <div class="tour-pricing-row">
+              <div>
+                <div style="font-size:0.75rem; color:var(--color-text-muted);">Giá từ</div>
+                <div class="tour-price-val">Từ 1.450.000đ/người</div>
+              </div>
+              <button onclick="openTourBooking('Di sản Đất Tổ', 'Từ 1.450.000đ/người')" class="btn-primary" style="padding:0.6rem 1.25rem; font-size:0.85rem;">
+                Khám phá tour
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 11: OCOP PHÚ THỌ
+       ========================================================================== -->
+  <section class="section-ocop" id="ocop">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-gold">MANG ĐẤT TỔ VỀ NHÀ</span>
+        <h2 class="section-title">Tinh hoa OCOP Phú Thọ</h2>
+        <p class="section-desc">
+          Những sản phẩm mang trọn hương vị, câu chuyện và bản sắc của miền Đất Tổ linh thiêng, được chứng nhận xếp hạng OCOP 3 đến 5 sao từ các làng nghề truyền thống.
+        </p>
+      </div>
+
+      <!-- OCOP Categories Filter -->
+      <div class="journey-filter-bar">
+        <button class="filter-pill ocop-filter-btn active" data-ocop-cat="all">Tất cả sản phẩm</button>
+        <button class="filter-pill ocop-filter-btn" data-ocop-cat="tea">Trà & Đồ uống</button>
+        <button class="filter-pill ocop-filter-btn" data-ocop-cat="fruit">Nông sản & Bưởi</button>
+        <button class="filter-pill ocop-filter-btn" data-ocop-cat="specialty">Đặc sản & Mì gạo</button>
+        <button class="filter-pill ocop-filter-btn" data-ocop-cat="food">Thực phẩm bản địa</button>
+        <button class="filter-pill ocop-filter-btn" data-ocop-cat="gift">Quà tặng</button>
+        <button class="filter-pill ocop-filter-btn" data-ocop-cat="craft">Thủ công mỹ nghệ</button>
+      </div>
+
+      <!-- OCOP Products Grid (Rendered via JS) -->
+      <div class="products-grid" id="ocopGrid"></div>
+
+      <div style="text-align:center;">
+        <button class="btn-secondary" onclick="alert('Hệ thống OCOP Phú Thọ kết nối hơn 120+ sản phẩm đạt chuẩn sao từ các huyện thành thị!')">
+          Khám phá tất cả sản phẩm OCOP →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 12: CÂU CHUYỆN SAU SẢN PHẨM (EDITORIAL)
+       ========================================================================== -->
+  <section class="section-artisan-editorial">
+    <div class="container editorial-grid">
+      <div class="artisan-frame">
+        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80" 
+             alt="Nghệ nhân chè Đất Tổ" 
+             class="artisan-photo">
+        <div style="position:absolute; bottom:1.5rem; left:1.5rem; right:1.5rem; background:rgba(19,36,29,0.85); backdrop-filter:blur(8px); padding:1rem 1.25rem; border-radius:12px; color:#FFF;">
+          <div style="font-weight:700; color:var(--color-vang-nhat); font-size:1.05rem;">Nghệ nhân Hà Văn Minh</div>
+          <div style="font-size:0.8rem; color:rgba(255,255,255,0.75);">Hợp tác xã Chè Long Cốc, huyện Tân Sơn, Phú Thọ</div>
+        </div>
+      </div>
+
+      <div class="editorial-content">
+        <span class="badge-red" style="margin-bottom:1.25rem;">NGƯỜI GÌN GIỮ HỒN ĐẤT TỔ</span>
+        <h2 class="editorial-quote">
+          “Không chỉ là một món quà.<br>
+          <span class="text-gradient-red">Đó là câu chuyện của Đất Tổ.”</span>
+        </h2>
+        <p class="editorial-narrative">
+          Mỗi búp chè Long Cốc ngậm sương mai, từng quả bưởi Đoan Hùng ươm nắng bãi bồi sông Lô, hay từng sợi mì Hùng Lô phơi mình dưới gió ngã ba sông... không đơn thuần là hàng hóa. Đó là kết tinh của tình yêu đất đai, đôi bàn tay cần cù và tâm hồn thuần hậu của người dân Phú Thọ qua bao đời gìn giữ.
+        </p>
+        <button class="btn-primary" onclick="alert('Đang mở chuyên đề: Gặp gỡ những người làm nên đặc sản Phú Thọ!')">
+          Gặp những người làm nên đặc sản Phú Thọ →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 13: COMBO TOUR + OCOP
+       ========================================================================== -->
+  <section class="section-combo">
+    <div class="container">
+      <div class="combo-card">
+        <div>
+          <span class="badge-red" style="background:var(--color-do-son); color:#FFF;">★ TRẢI NGHIỆM TRỌN VẸN</span>
+          <h2 style="font-size:2.4rem; color:var(--color-nau-dam); margin:0.75rem 0 1rem 0;">
+            Mang một phần Đất Tổ về nhà
+          </h2>
+          <p style="color:var(--color-text-muted); font-size:1.05rem; line-height:1.65;">
+            Gói trải nghiệm kết hợp hoàn hảo giữa hành hương tâm linh, mở khóa công nghệ số và quà tặng nông sản trứ danh Phú Thọ.
+          </p>
+
+          <div class="combo-pills-row">
+            <div class="combo-pill-item">🏛 Tour Đền Hùng trọn gói 1 ngày</div>
+            <div style="font-weight:800; color:var(--color-do-son);">+</div>
+            <div class="combo-pill-item">🎫 Hộ chiếu Cội nguồn Digital VIP</div>
+            <div style="font-weight:800; color:var(--color-do-son);">+</div>
+            <div class="combo-pill-item">🎁 Hộp quà OCOP Đất Tổ tinh tuyển</div>
+          </div>
+
+          <p style="font-size:0.88rem; color:var(--color-xanh-rung); font-weight:600;">
+            ✓ Bao gồm xe đưa đón Hà Nội - Đền Hùng • Bữa trưa đặc sản • Hướng dẫn viên địa phương • 01 hộp Chè Đinh & Mì gạo Hùng Lô cao cấp
+          </p>
+        </div>
+
+        <div class="combo-price-box">
+          <div style="font-size:0.85rem; text-transform:uppercase; letter-spacing:0.1em; color:rgba(255,255,255,0.75);">
+            GIÁ COMBO ƯU ĐÃI
+          </div>
+          <div class="combo-price-tag">Từ 950.000đ</div>
+          <div style="font-size:0.82rem; color:rgba(255,255,255,0.8); margin-bottom:1.5rem;">
+            Tiết kiệm 25% so với đặt riêng lẻ từng dịch vụ
+          </div>
+          <button onclick="openTourBooking('Combo Hành Trình Cội Nguồn + Quà OCOP', 'Từ 950.000đ/người')" class="btn-gold" style="width:100%; justify-content:center;">
+            Chọn combo trải nghiệm
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 14: REVIEWS & TESTIMONIALS
+       ========================================================================== -->
+  <section class="section-reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-gold">CẢM XÚC HÀNH HƯƠNG</span>
+        <h2 class="section-title">Hành trình được kể lại bởi chính bạn</h2>
+        <p class="section-desc">
+          Hàng ngàn du khách đã cầm trên tay tấm Hộ chiếu Cội nguồn và cảm nhận một chuyến về nguồn trọn vẹn, ý nghĩa hơn bao giờ hết.
+        </p>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="reviewer-meta">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Lê Hoàng Mai" class="reviewer-avatar">
+            <div>
+              <div class="reviewer-name">Lê Hoàng Mai</div>
+              <div style="font-size:0.75rem; color:var(--color-text-muted);">Hà Nội</div>
+              <div class="reviewer-stamps">🏆 10/10 Dấu ấn Cội nguồn</div>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            “Không chỉ tham quan Đền Hùng, mình còn hiểu được câu chuyện phía sau từng địa điểm. Cảm giác quét QR tại đỉnh Đền Thượng và con dấu đỏ đóng cộp xuống hộ chiếu thực sự nổi da gà vì tự hào!”
+          </p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="reviewer-meta">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Trần Đình Vũ" class="reviewer-avatar">
+            <div>
+              <div class="reviewer-name">Trần Đình Vũ</div>
+              <div style="font-size:0.75rem; color:var(--color-text-muted);">TP. Hồ Chí Minh</div>
+              <div class="reviewer-stamps">🏆 09/10 Dấu ấn Cội nguồn</div>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            “Gia đình tôi đưa cả ba thế hệ về thăm Đất Tổ. Các cháu nhỏ cực kỳ hào hứng với việc check-in thu thập huy hiệu, còn ông bà thì khen nức nở chè Long Cốc và mì Hùng Lô mua tại quầy OCOP.”
+          </p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="reviewer-meta">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Nguyễn Minh Thư" class="reviewer-avatar">
+            <div>
+              <div class="reviewer-name">Nguyễn Minh Thư</div>
+              <div style="font-size:0.75rem; color:var(--color-text-muted);">Việt kiều tại Pháp</div>
+              <div class="reviewer-stamps">🏆 10/10 Dấu ấn Cội nguồn</div>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            “Mười lăm năm xa quê hương, ngày cầm tấm Hộ chiếu Cội nguồn bước qua cổng Đền Hùng, tôi rưng rưng nước mắt. Giao diện thiết kế vô cùng tinh tế, trang nghiêm mà rất hiện đại.”
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 15: THỐNG KÊ (STATISTICS)
+       ========================================================================== -->
+  <section class="section-stats">
+    <div class="container stats-grid">
+      <div>
+        <div class="big-stat-number">10+</div>
+        <div class="big-stat-label">Điểm khám phá di tích</div>
+      </div>
+      <div>
+        <div class="big-stat-number">01</div>
+        <div class="big-stat-label">Hộ chiếu số tích hợp công nghệ</div>
+      </div>
+      <div>
+        <div class="big-stat-number">120+</div>
+        <div class="big-stat-label">Sản phẩm địa phương kết nối OCOP</div>
+      </div>
+      <div>
+        <div class="big-stat-number">01</div>
+        <div class="big-stat-label">Hành trình thiêng liêng về nguồn</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 16: FINAL CTA
+       ========================================================================== -->
+  <section class="section-final-cta">
+    <img src="https://images.unsplash.com/photo-1508807526345-15e9b5f4eaff?auto=format&fit=crop&w=1920&q=85" 
+         alt="Bình minh đỉnh núi Nghĩa Lĩnh" 
+         class="cta-backdrop-img">
+    <div class="cta-overlay"></div>
+
+    <div class="container cta-content-box">
+      <span class="badge-gold" style="margin-bottom:1.5rem;">LỜI TRIỆU TRIỆU CON TIM HƯỚNG VỀ ĐẤT TỔ</span>
+      <h2 class="cta-big-heading">
+        Cội nguồn không chỉ để nhớ.<br>
+        <span class="text-gradient-gold">Cội nguồn là để trở về.</span>
+      </h2>
+      <p class="cta-subtext">
+        Bắt đầu hành trình khám phá Đất Tổ Hùng Vương ngay hôm nay và lưu lại dấu ấn thiêng liêng của riêng bạn trong trang sử Cội nguồn.
+      </p>
+
+      <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+        <button onclick="openPassportModal()" class="btn-primary" style="padding:1rem 2.25rem; font-size:1.05rem;">
+          Nhận Hộ chiếu Cội nguồn
+        </button>
+        <button onclick="openTourBooking('Hành Trình Về Đất Tổ Toàn Diện', 'Từ 680.000đ/người')" class="btn-secondary" style="padding:1rem 2.25rem; font-size:1.05rem;">
+          Đặt tour Đền Hùng
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 17: FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Info Col -->
+        <div class="footer-col">
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
+            <img src="assets/logo.svg" alt="Logo" style="width:42px;height:42px;">
+            <span style="font-family:var(--font-serif); font-size:1.25rem; font-weight:800; color:var(--color-vang-nhat);">
+              HỘ CHIẾU CỘI NGUỒN
+            </span>
+          </div>
+          <p style="font-size:0.95rem; color:rgba(255,255,255,0.75); line-height:1.6; margin-bottom:1rem;">
+            <strong>“Chạm vào lịch sử – Kết nối cội nguồn”</strong><br>
+            Nền tảng số hóa du lịch văn hóa di sản Đền Hùng, Phú Thọ.
+          </p>
+          <div style="font-size:0.85rem; color:rgba(255,255,255,0.6);">
+            📍 Khu Di tích lịch sử Đền Hùng, xã Hy Cương, TP. Việt Trì, tỉnh Phú Thọ<br>
+            📞 Hotline hỗ trợ: 1900 8892<br>
+            ✉️ Email: lienhe@coinguon.phutho.vn
+          </div>
+
+          <div class="social-links">
+            <a href="javascript:void(0)" class="social-icon-btn" title="Facebook">f</a>
+            <a href="javascript:void(0)" class="social-icon-btn" title="TikTok">♪</a>
+            <a href="javascript:void(0)" class="social-icon-btn" title="YouTube">▶</a>
+            <a href="javascript:void(0)" class="social-icon-btn" title="Instagram">📷</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Khám phá -->
+        <div class="footer-col">
+          <h4>Khám phá</h4>
+          <ul class="footer-links">
+            <li><a href="#journey">Hành trình 10 điểm đến</a></li>
+            <li><a href="#storytelling">Biên niên sử Đất Tổ</a></li>
+            <li><a href="#interactive-map">Bản đồ số tương tác</a></li>
+            <li><a href="#gamification">Hệ thống danh hiệu & huy hiệu</a></li>
+            <li><a href="javascript:void(0)" onclick="openPassportModal()">Tra cứu Hộ chiếu điện tử</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Du lịch -->
+        <div class="footer-col">
+          <h4>Du lịch & Tour</h4>
+          <ul class="footer-links">
+            <li><a href="#tours">Tour Theo dấu Vua Hùng (1/2 ngày)</a></li>
+            <li><a href="#tours">Tour Một ngày về Đất Tổ</a></li>
+            <li><a href="#tours">Tour Di sản Đất Tổ (2N1Đ)</a></li>
+            <li><a href="#combo">Combo Tour + Hộp quà OCOP</a></li>
+            <li><a href="javascript:void(0)" onclick="alert('Đang kết nối cổng Hướng dẫn viên du lịch Phú Thọ!')">Cẩm nang hành hương Đền Hùng</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: OCOP & Hỗ trợ -->
+        <div class="footer-col">
+          <h4>OCOP & Hỗ trợ</h4>
+          <ul class="footer-links">
+            <li><a href="#ocop">Đặc sản OCOP Phú Thọ</a></li>
+            <li><a href="#ocop">Chè Long Cốc & Bưởi Đoan Hùng</a></li>
+            <li><a href="#ocop">Mì gạo Hùng Lô & Thịt chua</a></li>
+            <li><a href="javascript:void(0)" onclick="alert('Hotline hỗ trợ 24/7: 1900 8892')">Câu hỏi thường gặp (FAQ)</a></li>
+            <li><a href="javascript:void(0)" onclick="alert('Chính sách bảo mật dữ liệu hành trình theo tiêu chuẩn quốc gia.')">Chính sách bảo mật</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Hộ Chiếu Cội Nguồn – Bản quyền thuộc Ban Quản Lý Khu Di Tích Lịch Sử Đền Hùng & Sở Văn Hóa, Thể Thao và Du Lịch Phú Thọ.
+        </div>
+        <div style="display:flex; gap:1.25rem;">
+          <a href="javascript:void(0)" style="color:inherit; text-decoration:none;">Điều khoản sử dụng</a>
+          <a href="javascript:void(0)" style="color:inherit; text-decoration:none;">Quy chế hoạt động</a>
+          <a href="javascript:void(0)" style="color:inherit; text-decoration:none;">Tiêu chuẩn OCOP</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       SECTION 18: MOBILE BOTTOM NAVIGATION BAR
+       ========================================================================== -->
+  <nav class="mobile-bottom-nav">
+    <a href="#hero" class="nav-tab-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+      </svg>
+      <span>Trang chủ</span>
+    </a>
+
+    <a href="#interactive-map" class="nav-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+        <line x1="8" y1="2" x2="8" y2="18"></line>
+        <line x1="16" y1="6" x2="16" y2="22"></line>
+      </svg>
+      <span>Khám phá</span>
+    </a>
+
+    <!-- Center Big Highlighted Check-in Button -->
+    <button class="checkin-highlight-btn trigger-qr-scanner" title="Quét mã QR Check-in">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+        <circle cx="12" cy="13" r="4"></circle>
+      </svg>
+      <span class="checkin-label">CHECK-IN</span>
+    </button>
+
+    <button onclick="openPassportModal()" class="nav-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+        <line x1="7" y1="8" x2="17" y2="8"></line>
+        <line x1="7" y1="12" x2="17" y2="12"></line>
+        <line x1="7" y1="16" x2="12" y2="16"></line>
+      </svg>
+      <span>Hộ chiếu</span>
+    </button>
+
+    <button class="nav-tab-item cart-toggle-btn">
+      <div style="position:relative;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span class="cart-badge" id="mobileCartBadge" style="top:-6px;right:-10px;">1</span>
+      </div>
+      <span>OCOP</span>
+    </button>
+  </nav>
+
+  <!-- ==========================================================================
+       MODALS: QR CHECK-IN SCANNER SIMULATOR
+       ========================================================================== -->
+  <div class="modal-overlay" id="qrScannerModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeQrModalBtn">✕</button>
+
+      <!-- Active Scanner View -->
+      <div id="scannerActiveView">
+        <div style="padding:1.5rem 1.5rem 1rem 1.5rem; text-align:center;">
+          <span class="badge-gold" style="margin-bottom:0.5rem;">CAMERA CHECK-IN DI TÍCH</span>
+          <h3 style="font-size:1.35rem; color:var(--color-nau-dam); margin-bottom:0.25rem;">
+            Quét mã QR tại điểm di tích
+          </h3>
+          <p style="font-size:0.85rem; color:var(--color-text-muted);">
+            Hướng camera vào mã QR được đặt tại cổng hoặc trước các đền để mở khóa dấu ấn
+          </p>
+        </div>
+
+        <div class="scanner-viewport">
+          <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=600&q=80" 
+               alt="Camera View" 
+               class="scanner-video-sim">
+          <div class="scanner-reticle">
+            <div class="scanner-beam"></div>
+          </div>
+          <div style="position:absolute; bottom:12px; color:#FFF; font-size:0.75rem; background:rgba(0,0,0,0.6); padding:3px 10px; border-radius:9999px;">
+            Đang nhận diện địa điểm: ĐỀN THƯỢNG (KÍNH THIÊN LĨNH ĐIỆN)
+          </div>
+        </div>
+
+        <div style="padding:1.5rem; text-align:center; background:var(--color-kem-giay);">
+          <button onclick="simulateQRCheckin('den-thuong')" class="btn-primary" style="width:100%; justify-content:center;">
+            ⚡ Giả lập quét thành công mã QR tại Đền Thượng
+          </button>
+        </div>
+      </div>
+
+      <!-- Stamp Celebration View ("Cộp" Stamp Drop Animation) -->
+      <div class="stamp-celebration-container" id="stampCelebrationView">
+        <img src="assets/stamp-den-thuong.svg" alt="Dấu ấn mới" class="stamp-animated-drop">
+        
+        <span class="badge-red" style="font-size:0.85rem; margin-bottom:0.5rem;">★ DẤU ẤN MỚI ĐÃ MỞ KHÓA ★</span>
+        <h2 style="font-size:1.85rem; color:var(--color-do-son); margin-bottom:0.5rem;">
+          Bạn vừa khám phá Đền Thượng!
+        </h2>
+        <p style="color:var(--color-nau-dam); font-size:1rem; font-weight:600; margin-bottom:1.5rem;">
+          +1 Dấu ấn Cội nguồn đã đóng vào Hộ chiếu số của bạn
+        </p>
+
+        <div style="background:var(--color-kem-giay); padding:1rem; border-radius:12px; border:1px solid rgba(213,164,55,0.3); margin-bottom:1.5rem; text-align:left;">
+          <div style="font-weight:700; color:var(--color-nau-dam); font-size:0.92rem; margin-bottom:0.25rem;">
+            ⛰ Đền Thượng – Kính Thiên Lĩnh Điện (Đỉnh 175m)
+          </div>
+          <div style="font-size:0.82rem; color:var(--color-text-muted); line-height:1.5;">
+            Nơi Vua Hùng lập đàn tế Trời Đất và cột đá thề gìn giữ non sông trường tồn ngàn thu.
+          </div>
+        </div>
+
+        <div style="display:flex; gap:0.75rem; justify-content:center;">
+          <button onclick="document.getElementById('qrScannerModal').classList.remove('active'); openStoryModal('den-thuong');" class="btn-primary">
+            Khám phá câu chuyện →
+          </button>
+          <button onclick="document.getElementById('qrScannerModal').classList.remove('active'); openPassportModal();" class="btn-secondary">
+            Xem Hộ chiếu
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODALS: FULL DIGITAL PASSPORT & CERTIFICATE
+       ========================================================================== -->
+  <div class="modal-overlay" id="passportFullModal">
+    <div class="modal-card" style="max-width:680px;">
+      <button class="modal-close-btn" id="closePassportModal">✕</button>
+
+      <div style="padding:2rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid var(--color-vang-dong); padding-bottom:1rem; margin-bottom:1.5rem;">
+          <div style="display:flex; align-items:center; gap:0.75rem;">
+            <img src="assets/logo.svg" style="width:36px;height:36px;" alt="Logo">
+            <div>
+              <h3 style="font-size:1.25rem; color:var(--color-nau-dam); margin:0;">HỘ CHIẾU CỘI NGUỒN SỐ</h3>
+              <div style="font-size:0.72rem; color:var(--color-do-son); font-weight:700; letter-spacing:0.1em;">
+                PHÚ THỌ – VIỆT NAM • ANCESTRAL PASSPORT
+              </div>
+            </div>
+          </div>
+          <span class="badge-gold">XÁC THỰC SỐ</span>
+        </div>
+
+        <!-- Identity Section -->
+        <div style="display:grid; grid-template-columns:100px 1fr; gap:1.5rem; align-items:center; background:var(--color-kem-giay); padding:1.25rem; border-radius:14px; border:1px solid rgba(213,164,55,0.3); margin-bottom:1.5rem;">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" 
+               alt="User" 
+               style="width:90px;height:105px;object-fit:cover;border-radius:8px;border:2px solid var(--color-vang-dong);">
+          <div>
+            <div style="font-size:0.75rem; color:var(--color-text-muted); text-transform:uppercase;">Họ và tên / Full Name</div>
+            <div style="font-size:1.2rem; font-weight:800; color:var(--color-nau-dam); margin-bottom:0.5rem;">NGUYỄN VĂN HÙNG</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; font-size:0.8rem;">
+              <div>
+                <span style="color:var(--color-text-muted);">Số Hộ Chiếu:</span><br>
+                <strong style="color:var(--color-do-son);">VN-HG-2026-0892</strong>
+              </div>
+              <div>
+                <span style="color:var(--color-text-muted);">Ngày cấp:</span><br>
+                <strong>29/10/2026</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visa Stamp Collection -->
+        <div style="margin-bottom:1.5rem;">
+          <div style="font-weight:700; font-size:0.95rem; color:var(--color-nau-dam); margin-bottom:0.75rem; display:flex; justify-content:space-between;">
+            <span>Bộ sưu tập 10 Dấu ấn Cội nguồn</span>
+            <span style="color:var(--color-do-son); font-weight:800;">5 / 10 Điểm hoàn thành</span>
+          </div>
+          <div class="stamp-collection-grid" style="grid-template-columns:repeat(5, 1fr); gap:0.65rem;">
+            <div class="stamp-slot stamped" style="padding:4px;"><img src="assets/stamp-verified.svg" style="width:36px;height:36px;"><span style="font-size:0.6rem;font-weight:700;">Cổng Đền</span></div>
+            <div class="stamp-slot stamped" style="padding:4px;"><img src="assets/stamp-verified.svg" style="width:36px;height:36px;"><span style="font-size:0.6rem;font-weight:700;">Đền Hạ</span></div>
+            <div class="stamp-slot stamped" style="padding:4px;"><img src="assets/stamp-verified.svg" style="width:36px;height:36px;"><span style="font-size:0.6rem;font-weight:700;">Thiên Quang</span></div>
+            <div class="stamp-slot stamped" style="padding:4px;"><img src="assets/stamp-verified.svg" style="width:36px;height:36px;"><span style="font-size:0.6rem;font-weight:700;">Đền Trung</span></div>
+            <div class="stamp-slot stamped" style="padding:4px;"><img src="assets/stamp-den-thuong.svg" style="width:36px;height:36px;"><span style="font-size:0.6rem;font-weight:700;color:var(--color-do-son);">Đền Thượng</span></div>
+            <div class="stamp-slot locked" style="padding:4px;"><span style="font-size:1rem;">🔒</span><span style="font-size:0.6rem;">Lăng Vua Hùng</span></div>
+            <div class="stamp-slot locked" style="padding:4px;"><span style="font-size:1rem;">🔒</span><span style="font-size:0.6rem;">Đền Giếng</span></div>
+            <div class="stamp-slot locked" style="padding:4px;"><span style="font-size:1rem;">🔒</span><span style="font-size:0.6rem;">Mẫu Âu Cơ</span></div>
+            <div class="stamp-slot locked" style="padding:4px;"><span style="font-size:1rem;">🔒</span><span style="font-size:0.6rem;">Lạc Long Quân</span></div>
+            <div class="stamp-slot locked" style="padding:4px;"><span style="font-size:1rem;">🔒</span><span style="font-size:0.6rem;">Bảo Tàng</span></div>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--color-border-kem); padding-top:1rem;">
+          <button onclick="alert('Đã tạo ảnh Chứng nhận Cội nguồn chất lượng cao! Bạn có thể lưu về máy hoặc chia sẻ lên Facebook/Zalo.')" class="btn-primary" style="font-size:0.85rem; padding:0.6rem 1.25rem;">
+            📥 Tải chứng nhận điện tử (JPG)
+          </button>
+          <button onclick="document.getElementById('passportFullModal').classList.remove('active')" class="btn-secondary" style="font-size:0.85rem; padding:0.6rem 1.25rem;">
+            Đóng
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODALS: STORY LORE POPUP
+       ========================================================================== -->
+  <div class="modal-overlay" id="storyLoreModal">
+    <div class="modal-card" style="max-width:620px;">
+      <button class="modal-close-btn" onclick="document.getElementById('storyLoreModal').classList.remove('active')">✕</button>
+
+      <div style="position:relative; height:240px; overflow:hidden;">
+        <img src="" id="loreImg" alt="Địa danh" style="width:100%;height:100%;object-fit:cover;">
+        <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);"></div>
+        <div style="position:absolute; bottom:1.25rem; left:1.5rem; right:1.5rem; color:#FFF;">
+          <span class="badge-gold" id="loreElevation" style="margin-bottom:0.35rem;">Địa danh</span>
+          <h3 id="loreTitle" style="font-size:1.6rem; color:#FFF; margin:0;">Tên di tích</h3>
+        </div>
+      </div>
+
+      <div style="padding:2rem;" id="loreContent">
+        <!-- Content inserted dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODALS: TOUR BOOKING POPUP
+       ========================================================================== -->
+  <div class="modal-overlay" id="tourBookingModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="document.getElementById('tourBookingModal').classList.remove('active')">✕</button>
+
+      <div style="padding:2rem;">
+        <span class="badge-gold" style="margin-bottom:0.5rem;">ĐẶT TOUR TRẢI NGHIỆM</span>
+        <h3 id="bookingTourName" style="font-size:1.5rem; color:var(--color-nau-dam); margin-bottom:0.25rem;">Tour Đền Hùng</h3>
+        <div style="font-size:1.15rem; font-weight:800; color:var(--color-do-son); margin-bottom:1.5rem;" id="bookingTourPrice">Từ 680.000đ/người</div>
+
+        <form onsubmit="event.preventDefault(); alert('Đặt tour thành công! Chuyên viên du lịch Đền Hùng sẽ liên hệ bạn trong vòng 15 phút.'); document.getElementById('tourBookingModal').classList.remove('active');">
+          <div style="display:flex; flex-direction:column; gap:1rem; margin-bottom:1.5rem;">
+            <div>
+              <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.35rem;">Họ và tên du khách</label>
+              <input type="text" required placeholder="Nguyễn Văn Hùng" style="width:100%; padding:0.65rem 1rem; border:1px solid #CCC; border-radius:8px; font-family:inherit;">
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+              <div>
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.35rem;">Số điện thoại</label>
+                <input type="tel" required placeholder="0912 345 678" style="width:100%; padding:0.65rem 1rem; border:1px solid #CCC; border-radius:8px; font-family:inherit;">
+              </div>
+              <div>
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.35rem;">Ngày khởi hành</label>
+                <input type="date" required value="2026-11-01" style="width:100%; padding:0.65rem 1rem; border:1px solid #CCC; border-radius:8px; font-family:inherit;">
+              </div>
+            </div>
+            <div>
+              <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.35rem;">Số lượng người tham gia</label>
+              <select style="width:100%; padding:0.65rem 1rem; border:1px solid #CCC; border-radius:8px; font-family:inherit;">
+                <option>01 người (Đi lẻ)</option>
+                <option selected>02 người (Cặp đôi/Bạn bè)</option>
+                <option>04 - 06 người (Gia đình)</option>
+                <option>Đoàn trên 10 người</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">
+            Xác nhận đặt tour
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODALS: SEARCH MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="searchModal">
+    <div class="modal-card" style="max-width:560px;">
+      <button class="modal-close-btn" id="closeSearchBtn">✕</button>
+
+      <div style="padding:2rem;">
+        <h3 style="font-size:1.35rem; color:var(--color-nau-dam); margin-bottom:1rem;">
+          Tìm kiếm tại Hộ Chiếu Cội Nguồn
+        </h3>
+        <input type="text" placeholder="Tìm di tích, câu chuyện, tour hoặc đặc sản OCOP..." 
+               style="width:100%; padding:0.85rem 1.25rem; font-size:1rem; border:2px solid var(--color-vang-dong); border-radius:12px; font-family:inherit; margin-bottom:1.5rem;">
+
+        <div style="font-size:0.82rem; font-weight:700; color:var(--color-text-muted); margin-bottom:0.5rem;">
+          GỢI Ý TÌM KIẾM NHIỀU NHẤT:
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+          <a href="#journey" onclick="document.getElementById('searchModal').classList.remove('active')" class="filter-pill" style="font-size:0.8rem; padding:0.35rem 0.85rem;">Đền Thượng</a>
+          <a href="#journey" onclick="document.getElementById('searchModal').classList.remove('active')" class="filter-pill" style="font-size:0.8rem; padding:0.35rem 0.85rem;">Cột đá thề</a>
+          <a href="#ocop" onclick="document.getElementById('searchModal').classList.remove('active')" class="filter-pill" style="font-size:0.8rem; padding:0.35rem 0.85rem;">Chè Long Cốc OCOP 5★</a>
+          <a href="#ocop" onclick="document.getElementById('searchModal').classList.remove('active')" class="filter-pill" style="font-size:0.8rem; padding:0.35rem 0.85rem;">Bưởi Đoan Hùng</a>
+          <a href="#tours" onclick="document.getElementById('searchModal').classList.remove('active')" class="filter-pill" style="font-size:0.8rem; padding:0.35rem 0.85rem;">Tour 1 ngày</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       CART DRAWER
+       ========================================================================== -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <div style="display:flex; align-items:center; gap:0.6rem;">
+        <span style="font-size:1.3rem;">🛒</span>
+        <h4 style="font-size:1.15rem; color:var(--color-nau-dam); margin:0;">Giỏ Hàng OCOP Đất Tổ</h4>
+      </div>
+      <button id="closeCartBtn" style="background:none; border:none; font-size:1.25rem; cursor:pointer;">✕</button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Populated via app.js -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-subtotal-row">
+        <span>Tổng thanh toán:</span>
+        <span id="cartSubtotal" style="color:var(--color-do-son);">320.000đ</span>
+      </div>
+      <button class="btn-primary" style="width:100%; justify-content:center;" onclick="alert('Đang chuyển hướng tới cổng thanh toán an toàn VNPAY / Momo cho sản phẩm OCOP Phú Thọ!')">
+        Thanh toán ngay
+      </button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
